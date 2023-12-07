@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -60,8 +61,8 @@
                                     style="color:white">Pembelian</a>
                             </li>
                         @endif
-                        <li class="nav-item">
-                            <a href="{{ route('logout') }}" class="nav-link" style="color: white;">Logout</a>
+                        <li class="nav-item" style="margin-left: {{ Auth::user()->role == 'admin'?'700px':'9    00px' }}; margin-top:7px;">
+                            <a href="{{ route('logout') }}" style="color: #16f4d0; text-decoration:none"> <i class="fa-solid fa-right-from-bracket fa-xl" style="margin-right: 7px"></i>Logout</a>
                         </li>
                     @endif
                 </ul>

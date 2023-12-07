@@ -7,10 +7,10 @@
                 <div class="col-5">
                     <input type="date" name="search" id="search" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-info m-1" id="cari_data">Search</button>
+                <button type="submit"  style="margin-left: 5px; border-radius:5px; border:none"><i class="fa-solid fa-magnifying-glass fa-2xl" id="cari_data"></i></button>
                 <a href="{{ route('order.reset') }}" class="btn btn-secondary m-1" id="clear_data">Clear</a>
                 <div style="margin-left: 30%;">
-                    <a href="{{ route('order.export-excel') }}" class="btn btn-primary">Export Data(excel)</a>
+                    <a href="{{ route('order.export-excel') }}" style="color: #153243; float:right" ><i class="fa-solid fa-file-export fa-xl" style="margin-right:5px"></i>Export  excel </a>
                 </div>
             </form>
         </div>
@@ -52,9 +52,9 @@
                         @endphp
                         {{ \Carbon\Carbon::parse($order->created_at)->translatedFormat('d F Y') }}</td>
                     <td>
-                        <a href="{{ route('order.download', $order['id']) }}" class="btn btn-secondary">Unduh
-                            (.pdf)</a>
-                    </td>
+                        <center>
+                        <a href="{{ route('order.download', $order['id']) }}" ><i class="fa-solid fa-file-arrow-down fa-2xl" style="color: #153243; "></i></i></a>
+                    </td></center>
                 </tr>
             @endforeach
         </tbody>
