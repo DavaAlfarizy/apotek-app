@@ -99,8 +99,6 @@ class UserController extends Controller
 
         return redirect()->route('akun.index')->with('success', 'Akun berhasil diperbarui.');
     }
-
-  
     /**
      * Remove the specified resource from storage.
      */

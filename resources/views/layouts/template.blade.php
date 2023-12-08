@@ -61,7 +61,7 @@
                                     style="color:white">Pembelian</a>
                             </li>
                         @endif
-                        <li class="nav-item" style="margin-left: {{ Auth::user()->role == 'admin'?'700px':'9    00px' }}; margin-top:7px;">
+                        <li class="nav-item" style="margin-left: {{ Auth::user()->role == 'admin'?'700px':'800px' }}; margin-top:7px;">
                             <a href="{{ route('logout') }}" style="color: #16f4d0; text-decoration:none"> <i class="fa-solid fa-right-from-bracket fa-xl" style="margin-right: 7px"></i>Logout</a>
                         </li>
                     @endif
