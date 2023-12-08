@@ -15,7 +15,7 @@
                 </div>
             @endif
 
-            <div class="card" style="margin-top: 40px; ">
+            <div class="card" style="margin-top: 40px;">
                 <div class="card-body">
                     <h1 class="card-title">Welcome {{ Auth::user()->name }}!</h1>
                     <hr class="my-4">

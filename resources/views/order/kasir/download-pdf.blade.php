@@ -14,7 +14,6 @@
         display: flex;
         justify-content: flex-end;
     }
-
     .btn-back {
         width: fit-content;
         padding: 8px 15px;
