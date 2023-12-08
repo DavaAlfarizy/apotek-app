@@ -1,6 +1,8 @@
 @extends('layouts.template')
 
 @section('content')
+
+<h1 style="text-align: center;">Login First</h1>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
