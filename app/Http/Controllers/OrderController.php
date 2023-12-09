@@ -80,8 +80,16 @@ class OrderController extends Controller
         // key akan berupa value dr inputan medicines(id), item array berupa jumlah perhitungan item dupilikat
         foreach ($arrayDistinct as $id => $count) {
             // mencari data obat berdasarkan id (obat yang dipilih)
+            
             $medicine = Medicine::where('id', $id)->first();
-
+            // if('stock' > $count){
+            $stokAkhir = $medicine ->stock - $count;
+                Medicine::where('id', $id)->update([
+                    'stock' => $stokAkhir,
+                ]);
+            // }else{
+            //     return redirect()->back()->with('error', 'Stok tidak tersedia');
+            // }
             // pastikan $medicine tidak null sebelum mengakses propertinya
             if ($medicine) {
                 // ambil bagian column price dari hasil pencarian lalu kalikan dengan jumlah item duplikat sehingga akan menghasilkan total harga dr pembelian obat tersebut
@@ -95,7 +103,7 @@ class OrderController extends Controller
                     'price' => $medicine['price'],
                     'sub_price' => $subPrice,
                 ];
-
+                
                 // masukan struktur array tersebut ke array kosong yg disediakan sebelumnya
                 array_push($arrayAssocMedicines, $arrayItem);
             } else {

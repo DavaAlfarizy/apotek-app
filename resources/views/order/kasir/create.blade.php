@@ -1,10 +1,12 @@
 @extends('layouts.template')
 
 @section('content')
+@if (Session::get('failed'))
+<div class="alert alert-danger" role="alert">{{ Session::get('failed') }}</div>
+@endif
     <div class="container mt-3">
         <form action="{{ route('kasir.order.store') }}" class="card m-auto p-5" method="POST">
             @csrf
-
             @if ($errors->any())
                 <ul class="alert alert-danger p-3">
                     @foreach ($errors->all() as $error)

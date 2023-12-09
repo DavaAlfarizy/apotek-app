@@ -43,7 +43,7 @@
             </form>
         </div>
         <div class="col-md-6">
-            <img src="../assets/img/medicine" alt="Image" class="img-fluid" style="margin-left:70px">
+            <img src="../assets/img/dokter.png" alt="Image" class="img-fluid" style="justify-content:end; margin-top:45px">
         </div>
     </div>
 </div>

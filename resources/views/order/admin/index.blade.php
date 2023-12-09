@@ -53,7 +53,7 @@
                         {{ \Carbon\Carbon::parse($order->created_at)->translatedFormat('d F Y') }}</td>
                     <td>
                         <center>
-                        <a href="{{ route('order.download', $order['id']) }}" ><i class="fa-solid fa-file-arrow-down fa-2xl" style="color: #153243; "></i></i></a>
+                        <a href="{{ route('order.download', $order['id']) }}" ><i class="fa-solid fa-file-arrow-down fa-2xl" style="color:1; "></i></i></a>
                     </td></center>
                 </tr>
             @endforeach
